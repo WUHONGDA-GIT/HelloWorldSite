@@ -1,8 +1,13 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 "项目入口"
+"""
+python .\manage.py startapp app01
+python .\manage.py runserver
+"""
 import os
 import sys
+import django
 
 
 def main():

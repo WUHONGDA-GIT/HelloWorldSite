@@ -15,12 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 """
-URL 和 函数的 对应关系
+url 和 view内函数 的对应关系
 """
 
 from django.contrib import admin
 from django.urls import path
+import app01.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('url2view/',app01.views.url2view_fun),
+    path('url2view2templates2html/',app01.views.url2view2templates2html_fun),
+    path('url2view2templates2html_with_static)/',app01.views.url2view2templates2html_with_static_fun),
+    path('url2view2templates2html_with_data)/',app01.views.url2view2templates2html_with_data_fun)
 ]

@@ -1,0 +1,16 @@
+{% load static %} <!-- static特殊写法需要导入这个标签 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-4.6.2/scss/bootstrap.scss' %}"> <!-- 引入bootstrap提供的css(网页样式) -->
+</head>
+<body>
+    <h1>with_static<h1>
+    <button type="text" class="btn btn-primary">新建</button>
+    <img src="/static/1.png" alt="">
+    <script src="{% static 'js/jQuery.js' %}"></script> <!-- 引入jQuery提供的js api -->
+    <script src="{% static 'plugins/bootstrap-4.6.2/js/bootstrap.min.js' %}"></script> <!-- 引入bootstrap提供的js api -->
+</body>
+</html>

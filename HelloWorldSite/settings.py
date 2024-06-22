@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#注册app
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app01.apps.App01Config'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,7 @@ ROOT_URLCONF = 'HelloWorldSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'templates'] #此处配置了templates的默认目录, 如果没有配置, render函数会依次搜素app内的templates目录
         ,
         'APP_DIRS': True,
         'OPTIONS': {
