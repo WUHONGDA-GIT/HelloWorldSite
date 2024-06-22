@@ -89,17 +89,17 @@ def html_handle_post_request(request):
 
 def orm_operations(request):
     # 增加
-    # new_user = UserInfo(name='John Doe', password='123456')
-    # new_user.save()
+    new_user = UserInfo(name='John Doe', password='123456')
+    new_user.save()
 
     # 修改
-    user_to_update = UserInfo.objects.get(name='John Doe')
+    # user_to_update = UserInfo.objects.get(name='John Doe')
     # user_to_update.password = '654321'
     # user_to_update.save()
 
     # 删除
-    user_to_delete = UserInfo.objects.get(name='John Doe')
-    user_to_delete.delete()
+    # user_to_delete = UserInfo.objects.get(name='John Doe')
+    # user_to_delete.delete()
 
     # 查询
     users = UserInfo.objects.all()

@@ -4,6 +4,7 @@
 """
 python .\manage.py startapp app01
 python manage.py runserver ：启动开发服务器，默认在 127.0.0.1:8000 运行。
+ python manage.py runserver 0.0.0.0:8000
 python manage.py startapp <app_name> ：创建一个新的应用。
 python manage.py makemigrations ：根据模型的更改生成迁移文件。注意: app要注册到django才会纳入处理范围
 python manage.py migrate ：应用迁移文件，将模型的更改同步到数据库。注意: app要注册到django才会纳入处理范围
