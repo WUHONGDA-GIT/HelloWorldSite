@@ -24,8 +24,15 @@ import app01.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 基础关系
     path('url2view/',app01.views.url2view_fun),
-    path('url2view2templates2html/',app01.views.url2view2templates2html_fun),
-    path('url2view2templates2html_with_static)/',app01.views.url2view2templates2html_with_static_fun),
-    path('url2view2templates2html_with_data)/',app01.views.url2view2templates2html_with_data_fun)
+    path('url2view2templates2html_with_blank/',app01.views.url2view2templates2html_with_blank),
+    path('url2view2templates2html_with_static/', app01.views.url2view2templates2html_with_static),
+    path('url2view2templates2html_with_var/', app01.views.url2view2templates2html_with_var),
+    path('get_repones_content_from_ex_web/', app01.views.get_repones_content_from_ex_web),
+    # HTTPS玩法
+    path('http_api_case_show/', app01.views.http_api_case_show),
+    path('html_create_and_handle_post_request/', app01.views.html_create_and_handle_post_request),
+    path('html_create_post_request/', app01.views.html_create_post_request),
+    path('html_handle_post_request/', app01.views.html_handle_post_request)
 ]
