@@ -34,5 +34,7 @@ urlpatterns = [
     path('http_api_case_show/', app01.views.http_api_case_show),
     path('html_create_and_handle_post_request/', app01.views.html_create_and_handle_post_request),
     path('html_create_post_request/', app01.views.html_create_post_request),
-    path('html_handle_post_request/', app01.views.html_handle_post_request)
+    path('html_handle_post_request/', app01.views.html_handle_post_request),
+    #mysql操作
+    path('orm_operations/', app01.views.orm_operations)
 ]

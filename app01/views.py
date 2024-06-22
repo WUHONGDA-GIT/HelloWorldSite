@@ -4,6 +4,8 @@ from django.shortcuts import HttpResponse
 import requests
 import json
 # Create your views here.
+from app01.models import UserInfo
+
 """
 url 和 view内函数 的对应关系
 render函数: templates模板库, 查找模板;
@@ -83,3 +85,23 @@ def html_handle_post_request(request):
         return HttpResponse(f'这是一个 POST 请求，获取的数据为: {name}')
     elif request.method == 'GET':
         return HttpResponseRedirect("http://127.0.0.1:8000/html_create_post_request/")
+
+
+def orm_operations(request):
+    # 增加
+    # new_user = UserInfo(name='John Doe', password='123456')
+    # new_user.save()
+
+    # 修改
+    user_to_update = UserInfo.objects.get(name='John Doe')
+    # user_to_update.password = '654321'
+    # user_to_update.save()
+
+    # 删除
+    user_to_delete = UserInfo.objects.get(name='John Doe')
+    user_to_delete.delete()
+
+    # 查询
+    users = UserInfo.objects.all()
+    user_data = [{'name': user.name, 'password': user.password} for user in users]
+    return JsonResponse({'message': 'ORM operations completed successfully', 'data': user_data})

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-n#8g)fxmd5p@c5h3=1t4d*h1@$z67of@(j4n@8g^aylm9c=4fi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["192.168.152.1"]
 
 
 # Application definition
@@ -78,13 +78,26 @@ WSGI_APPLICATION = 'HelloWorldSite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'helloworldsite',  # 替换为您的数据库名称
+        'USER': 'root',  # 替换为您的数据库用户名
+        'PASSWORD': '123456',  # 替换为您的数据库密码
+        'HOST': '192.168.152.101',  # 替换为数据库服务器的主机地址，例如 '127.0.0.1' 或实际的 IP 地址
+        'PORT': '3306',  # 替换为数据库服务器的端口，默认是 3306
     }
 }
 
+
+#
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
